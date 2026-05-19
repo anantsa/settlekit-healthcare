@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #fafaf9;
+  --surface: #ffffff;
+  --ink: #0a0a0a;
+  --ink-2: #404040;
+  --ink-3: #737373;
+  --line: #e7e5e4;
+  --line-2: #d6d3d1;
+  --accent: #c96a1f;
+  --accent-soft: #fdf2e1;
+
+  --sk-font-sans: Inter, Aptos, "Segoe UI", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --sk-primary: var(--accent);
+  --sk-primary-soft: var(--accent-soft);
+  --sk-accent: var(--accent);
+  --sk-accent-soft: var(--accent-soft);
+  --sk-page: var(--bg);
+  --sk-card: var(--surface);
+  --sk-surface-soft: var(--surface);
+  --sk-surface-strong: var(--line);
+  --sk-dialog-backdrop: rgba(10, 10, 10, 0.38);
+  --sk-button-text: var(--bg);
+  --sk-text: var(--ink);
+  --sk-muted: var(--ink-3);
+  --sk-border: var(--line);
+  --sk-border-strong: var(--line-2);
+  --sk-success: #166534;
+  --sk-success-soft: #f0fdf4;
+  --sk-warning: var(--accent);
+  --sk-warning-soft: var(--accent-soft);
+  --sk-risk: #991b1b;
+  --sk-risk-soft: #fef2f2;
+  --sk-focus: rgba(10, 10, 10, 0.24);
+  --sk-shadow: 0 24px 80px rgba(10, 10, 10, 0.12);
+  --sk-logo-shadow: none;
+  --sk-primary-shadow: none;
+  --sk-success-border: rgba(22, 101, 52, 0.25);
+  --sk-warning-border: rgba(201, 106, 31, 0.25);
+  --sk-risk-border: rgba(153, 27, 27, 0.22);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sk-font-sans);
+    -webkit-font-smoothing: antialiased;
+    font-feature-settings: "cv11", "ss01";
+  }
+
+  ::selection {
+    background: var(--ink);
+    color: var(--bg);
+  }
+
+  button,
+  a {
+    font: inherit;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  button:focus-visible,
+  a:focus-visible {
+    outline: 3px solid var(--sk-focus);
+    outline-offset: 3px;
+  }
+}
